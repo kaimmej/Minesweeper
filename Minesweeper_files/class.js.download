@@ -1,0 +1,74 @@
+class Minesweeper
+{
+	static get SIZE()  { return 15; }
+	static get BOMB()  { return "B"; }
+	static get EMPTY() { return "E"; }
+	
+	// PLACE YOUR PROPERTIES BELOW
+
+	// PLACE YOUR PROPERTIES ABOVE
+
+    constructor(rows = Minesweeper.SIZE, columns = Minesweeper.SIZE, probability_chance = 0.1)
+    {
+        // PLACE YOUR PROPERTIES BELOW
+
+		// PLACE YOUR PROPERTIES ABOVE
+    }
+    
+    init_board()
+    {
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	flood_fill()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	lock()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	unlock()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	_flag()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	_open()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	explore(x, y)
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+	
+	is_winning_choice()
+	{
+		// PLACE YOUR IMPLEMENTATION BELOW
+
+		// PLACE YOUR IMPLEMENTATION ABOVE
+	}
+}
+

@@ -1,0 +1,124 @@
+
+/* css grid is being used to display the elements. 
+flexbox was not chosen because we want to arrange elements in a 2dimensional array.. instead of a 1d array. 
+We need to control the elements by both ROW and COLUMN
+
+much of the following css was taken from here... 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods#one-dimensional_versus_two-dimensional_layout
+*/
+
+.counter-text {
+    font-size: 15;
+    margin-top: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#start {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+#game_over{
+    display: none;
+    font-family: "Roboto";
+    font-size: 22px;
+}
+.heading-container-flexbox {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+.counter-text{
+    align-items: left;   
+}
+.timer-display{
+    align-items: right;  
+    justify-content: flex-end; 
+}
+
+.subheading-container-flexbox {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.board-container-flexbox {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board {
+    display: inline-grid;
+    padding: 1px;
+    grid-template-columns: repeat(var(--WIDTH), 25px);
+    grid-template-rows: repeat(var(--HEIGHT), 25px);
+
+    border: 2px solid lightgray;
+
+}
+
+#board > * {
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    user-select: none;
+}
+
+#board div {
+    height: 25px;
+    width: 25px;
+    background-size: 25px;
+}
+
+
+#board > [data-status="unopened"] {
+    background-image: url("assets\\empty.png");
+}
+
+#board > [data-status="empty"] {
+    background-image: url("assets\\0.png");
+}
+
+#board > [data-status="flagged"] {
+    background-image: url("assets\\flag.png");
+}
+
+#board > [data-status="bomb"] {
+    background-image: url("assets\\bomb.png");
+    background-color: red;
+}
+
+#board > [data-status="1"] {
+    background-image: url("assets\\1.png");
+}
+#board > [data-status="2"] {
+    background-image: url("assets\\2.png");
+}
+#board > [data-status="3"] {
+    background-image: url("assets\\3.png");
+}
+#board > [data-status="4"] {
+    background-image: url("assets\\4.png");
+}
+#board > [data-status="5"] {
+    background-image: url("assets\\5.png");
+}
+#board > [data-status="6"] {
+    background-image: url("assets\\6.png");
+}
+#board > [data-status="7"] {
+    background-image: url("assets\\7.png");
+}
+#board > [data-status="8"] {
+    background-image: url("assets\\8.png");
+}
+#board > [data-status="?"] {
+    background-image: url("extra_credit\\question.png");
+}
