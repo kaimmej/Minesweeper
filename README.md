@@ -1,5 +1,5 @@
 # Minesweeper
-Minesweeper: 100% Javascript
+Minesweeper coded in javascript 
 
 
 ## Table of contents
@@ -8,19 +8,18 @@ Minesweeper: 100% Javascript
 * [Setup](#setup)
 
 ## General info
-This project is simple Lorem ipsum dolor generator.
+The gameboard, each individual cell as well as the countdown clock are all seperate and dynamic objects that ineract with eachother. Javascript is used to make everything feel dynamic, PHP is used because I had familiarity with it. 
 	
 ## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* PHP
+* Javacript
 	
 ## Setup
 To run this project, install it locally using npm:
 
 ```
-$ cd ../lorem
+$ cd ../Minesweeper
 $ npm install
 $ npm start
 ```
