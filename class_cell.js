@@ -69,43 +69,14 @@ class Cell{
 		const bombs = adjacentCells.filter(c => c.bomb)
 		const num_adjacentBombs = bombs.length
 
-		// if(num_adjacentBombs === 0){
-		// 	// if this cell is empty, we want to recursivley call the openCell function on all the adjacent neighbors
-		// 	this.status = 'empty'
-		// 	adjacentCells.forEach(cell => cell.openCell(board))
-		// 	return
-		// } 
-		switch(num_adjacentBombs) {
-			case 0:
-				this.status = 'empty'
-				adjacentCells.forEach(cell => cell.openCell(board, gameStatus))
-				return
-			case 1:
-				this.status = '1'
-				return
-			case 2:
-				this.status = '2'
-				return
-			case 3:
-				this.status = '3'
-				return
-			case 4:
-				this.status = '4'
-				return
-			case 5:
-				this.status = '5'
-				return
-			case 6:
-				this.status = '6'
-				return
-			case 7:
-				this.status = '7'
-				return
-			case 8:
-				this.status = '8'
-				return
-
+		if(num_adjacentBombs === 0){
+			this.status = 'empty'
+			adjacentCells.forEach(cell => cell.openCell(board, gameStatus))
+		} else {
+			this.status = num_adjacentBombs.toString()
 		}
+	
+		return
 
 		}
 	}
