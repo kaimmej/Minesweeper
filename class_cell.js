@@ -71,6 +71,8 @@ class Cell{
 
 		if(num_adjacentBombs === 0){
 			this.status = 'empty'
+			
+			// if there are no bombs adjacent, recursivley open all adjacent cells. 
 			adjacentCells.forEach(cell => cell.openCell(board, gameStatus))
 		} else {
 			this.status = num_adjacentBombs.toString()

@@ -36,32 +36,23 @@
 		
 
 		<script>
-		// START UP
-		document.addEventListener('DOMContentLoaded', ()=> {
-			// create the board 
-			const timer = new Timer();
-			const game = new Minesweeper(timer);
-
-			let startButton = document.querySelector('#start');
-			startButton.onclick = () => {
+		
+			document.addEventListener('DOMContentLoaded', ()=> {
 				
-				// create a new timer and start it.
-				
-				timer.startTimer();
+				// create the board 
+				const timer = new Timer();
+				const game = new Minesweeper(timer);
+				let startButton = document.querySelector('#start');
+				startButton.onclick = () => {
+					
+					timer.startTimer();
+					game.unlock();
+					startButton.innerHTML = "reset";
+					game.reset();
 
-				// unlock all buttons on the page.
-				game.unlock();
+				}
+			})
 
-				// change the text of the start button to "reset"
-				startButton.innerHTML = "reset";
-
-				// the start/reset button now needs to restart the game (but not generate new bombs everywhere)
-				game.reset();
-
-		}
-
-
-	})
 		</script>
 
 
